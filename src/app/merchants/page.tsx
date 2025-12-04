@@ -2,13 +2,23 @@
 
 import { useMerchants } from "@/features/merchants/hooks";
 import { useRouter } from "next/navigation";
+import Pagination from "@/components/common/Pagination";
+import { useState } from "react";
 
 export default function MerchantsPage() {
   const { data, isLoading, isError } = useMerchants();
   const router = useRouter();
 
+  const [page, setPage] = useState(1);
+  const pageSize = 10;
+
   if (isLoading) return <div>로딩 중...</div>;
   if (isError) return <div>데이터 로드 오류</div>;
+  if (!data || data.length === 0) return <div>가맹점 데이터가 없습니다.</div>;
+
+  const totalPages = Math.ceil(data.length / pageSize);
+  const startIndex = (page - 1) * pageSize;
+  const currentItems = data.slice(startIndex, startIndex + pageSize);
 
   return (
     <div className="p-8">
@@ -26,7 +36,7 @@ export default function MerchantsPage() {
           </thead>
 
           <tbody>
-            {data?.map((m) => (
+            {currentItems.map((m) => (
               <tr
                 key={m.mchtCode}
                 className="table-row cursor-pointer"
@@ -53,6 +63,12 @@ export default function MerchantsPage() {
           </tbody>
         </table>
       </div>
+
+      <Pagination
+        page={page}
+        totalPages={totalPages}
+        onPageChange={setPage}
+      />
     </div>
   );
 }
