@@ -12,6 +12,63 @@
   --font-mono: var(--font-geist-mono);
 }
 
+@layer components {
+
+  /* 테이블 컨테이너 */
+  .table-container {
+    @apply overflow-hidden rounded-lg shadow;
+  }
+
+  /* 테이블 루트 */
+  .table-root {
+    @apply w-full text-sm border-collapse;
+  }
+
+  /* thead 아래 가로 라인 */
+  .table-head-row {
+    @apply border-b border-gray-300;
+  }
+
+  /* 헤더 셀 */
+  .table-head-cell {
+    @apply p-4 text-center font-semibold text-gray-700 bg-gray-100 
+           border-r border-gray-300;
+  }
+
+  /* 바디 셀 */
+  .table-body-cell {
+    @apply p-4 text-center border-r border-gray-200;
+  }
+
+  /* 행 hover */
+  .table-row {
+    @apply hover:bg-gray-50 transition-colors;
+  }
+
+  /* 마지막 열 border 제거 */
+  .table-row td:last-child,
+  .table-head-cell:last-child {
+    @apply border-r-0;
+  }
+
+  /* 상태 배지 스타일 */
+  .status-badge {
+    @apply px-2 py-1 rounded text-xs font-semibold;
+  }
+
+  .status-success {
+    @apply bg-green-100 text-green-700;
+  }
+
+  .status-failed {
+    @apply bg-red-100 text-red-600;
+  }
+
+  .status-cancelled {
+    @apply bg-yellow-100 text-yellow-700;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
