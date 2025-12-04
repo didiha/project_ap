@@ -4,7 +4,6 @@ import "./globals.css";
 
 import Providers from "./providers";
 import Sidebar from "@/components/layout/Sidebar";
-import Header from "@/components/layout/Header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,9 +35,8 @@ export default function RootLayout({
 
             {/* 메인 페이지 영역 */}
             <main className="flex-1 min-h-screen bg-gray-50">
-              <Header />
-              
-              <div className="p-6">
+
+              <div className="ml-56 p-6">
                 {children}
               </div>
             </main>
