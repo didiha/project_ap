@@ -129,8 +129,15 @@ API Base URL을 환경 변수로 분리할 경우:
 ```NEXT_PUBLIC_API_BASE=https://recruit.paysbypays.com/api/v1```
 
 ## 화면
+메인보드
 <img width="1475" height="876" alt="image" src="https://github.com/user-attachments/assets/82a16108-d7a1-4a9f-b190-d7265c68ef70" />
+<br>
+거래 내역
 <img width="1475" height="870" alt="image" src="https://github.com/user-attachments/assets/508f975c-8172-4be1-a3a1-cdbbb9a5ea3a" />
+<br>
+가맹점 목록
 <img width="1475" height="877" alt="image" src="https://github.com/user-attachments/assets/ec579159-2358-4635-9953-96da16b3ed7d" />
+<br>
+가맹점 상세
 <img width="1475" height="874" alt="image" src="https://github.com/user-attachments/assets/dd769c8d-ce88-4d5f-a6d7-2dcd399b6621" />
 
