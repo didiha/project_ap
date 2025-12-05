@@ -115,6 +115,8 @@ src/
 Node.js **20.x LTS** 환경에서 아래 명령으로 실행할 수 있습니다:
 ```
 npm install
+npm install recharts
+npm install @iconify/react
 npm run dev
 ```
 이후 브라우저에서 아래 주소로 접속합니다:
